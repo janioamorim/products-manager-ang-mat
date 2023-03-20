@@ -1,0 +1,28 @@
+<mat-sidenav-container
+  class="sidenav-container"
+  (backdropClick)="closeSideNav()">
+  <mat-sidenav #sidenav class="sidenav" fixedInViewport="true">
+    <mat-toolbar color="primary">Menu</mat-toolbar>
+    <mat-nav-list (click)="closeSideNav()">
+      <a mat-list-item [routerLink]="['/products']">Inicial</a>
+      <mat-divider></mat-divider>
+      <a mat-list-item [routerLink]="['/products/new']"
+        >Cadastrar novo Produto</a
+      >
+      <mat-divider></mat-divider>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" class="header-toolbar">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="openSideNav()"
+      >
+        <mat-icon aria-label="Side nav toggle icon"> menu</mat-icon>
+      </button>
+      <span>Gerenciamento de Produtos</span>
+
+    </mat-toolbar></mat-sidenav-content
+  ></mat-sidenav-container>
